@@ -2,8 +2,8 @@ from typing import List
 
 
 def get_max_concatenated_number(numbers: List[str]) -> int:
-
-    return int(''.join(sorted(numbers, reverse=True)))
+    numbers.sort(key=lambda x: x*10, reverse=True)
+    return int(''.join(numbers))
 
 
 numbers: List[str] = []
