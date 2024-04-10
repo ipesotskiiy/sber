@@ -50,7 +50,7 @@ def get_distances_with_new_cash_machine(
 
         l_distances.remove(max_distance)
         l_distances.insert(index_max_distance, new_distance)
-        l_distances.insert(index_max_distance + 1, new_distance)
+        l_distances.insert(index_max_distance, new_distance)
 
     return l_distances
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
         l_distances.append(number)
 
-    new_distances: List[int, float] = get_distances_with_new_cash_machine(l_distances, k_new_cash_machines)
+    new_distances: List[Union[int, float]] = get_distances_with_new_cash_machine(l_distances, k_new_cash_machines)
 
     for distance in new_distances:
         print(distance, end='\n')
